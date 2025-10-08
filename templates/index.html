@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tri-Chat - Premium Chat Experience</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="/static/main.css" rel="stylesheet">
+</head>
+<body>
+    <main class="app-shell" id="appShell">
+        <section class="connect-screen" id="connectScreen" aria-labelledby="connectTitle">
+            <div class="brand-bar">
+                <div class="brand-mark" aria-hidden="true">
+                    <i class="fas fa-comments"></i>
+                </div>
+                <div>
+                    <h1>Tri-Chat</h1>
+                    <p>Talk together. Stay connected.</p>
+                </div>
+            </div>
+
+            <div class="welcome-art" aria-hidden="true">
+                <div class="bubble bubble-primary">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <div class="bubble bubble-secondary">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+
+            <div class="welcome-copy">
+                <h2 id="connectTitle">Welcome to Tri-Chat!</h2>
+                <p>Connect to a room and start chatting with others instantly.</p>
+            </div>
+
+            <form class="connection-form" id="connectionForm">
+                <div class="input-group">
+                    <label for="usernameInput">Your Name</label>
+                    <div class="field-shell">
+                        <i class="fas fa-user"></i>
+                        <input type="text" id="usernameInput" placeholder="Enter your name" maxlength="20" autocomplete="name">
+                        <i class="fas fa-check field-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <div class="input-group">
+                    <label for="roomInput">Room</label>
+                    <div class="field-shell">
+                        <i class="fas fa-hashtag"></i>
+                        <input type="text" id="roomInput" placeholder="global" maxlength="30" autocomplete="off">
+                        <i class="fas fa-check field-check" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+                <button class="btn btn-primary" id="connectBtn" type="submit">
+                    <i class="fas fa-plug"></i>
+                    <span>Connect</span>
+                </button>
+            </form>
+
+            <div class="status neutral" id="status" aria-live="polite">
+                <i class="fas fa-info-circle"></i>
+                Enter your name and click Connect to start chatting
+            </div>
+
+            <div class="connect-tip">
+                <i class="fas fa-lightbulb"></i>
+                <span>Tip: Share the room name with your friends so they can join too.</span>
+            </div>
+        </section>
+
+        <section class="chat-screen is-hidden" id="chatScreen" aria-label="Chat room">
+            <header class="chat-header">
+                <button class="icon-btn mobile-back-btn" id="mobileBackBtn" type="button" aria-label="Disconnect and return to connect screen">
+                    <i class="fas fa-arrow-left"></i>
+                </button>
+
+                <div class="room-meta">
+                    <h2 id="roomTitle">global</h2>
+                    <p>
+                        <span class="online-dot"></span>
+                        <span id="onlineCount">0 members online</span>
+                    </p>
+                </div>
+
+                <div class="chat-actions">
+                    <button class="icon-btn users-toggle" id="usersToggle" type="button" aria-label="Show online users" aria-controls="usersPanel" aria-expanded="false">
+                        <i class="fas fa-users"></i>
+                    </button>
+                    <button class="icon-btn desktop-disconnect-btn" id="disconnectBtn" type="button" aria-label="Disconnect">
+                        <i class="fas fa-sign-out-alt"></i>
+                    </button>
+                </div>
+            </header>
+
+            <div class="chat-body">
+                <aside class="users-panel" id="usersPanel">
+                    <div class="users-panel-header">
+                        <h3>Online</h3>
+                        <button class="icon-btn users-close" id="usersClose" type="button" aria-label="Close online users">
+                            <i class="fas fa-times"></i>
+                        </button>
+                    </div>
+                    <ul class="user-list" id="userList"></ul>
+                    <p class="empty-users" id="emptyUsers">No one else is here yet.</p>
+                </aside>
+
+                <div class="messages-wrap">
+                    <div class="messages" id="messages"></div>
+
+                    <form class="input-area" id="messageForm">
+                        <div class="file-input-wrapper">
+                            <input type="file" id="fileInput" accept="*/*" aria-label="Attach file">
+                            <label for="fileInput" class="file-input-label" aria-hidden="true">
+                                <i class="fas fa-paperclip"></i>
+                            </label>
+                        </div>
+                        <textarea id="messageInput" placeholder="Type a message..." maxlength="500" rows="1"></textarea>
+                        <button class="send-btn" id="sendBtn" type="submit" aria-label="Send message">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="mobile-drawer-backdrop" id="drawerBackdrop"></div>
+    <script src="/static/main.js"></script>
+</body>
+</html>
