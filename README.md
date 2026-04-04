@@ -1,19 +1,9 @@
----
-title: TriChat
-emoji: 💬
-colorFrom: indigo
-colorTo: pink
-sdk: docker
-sdk_version: '1.0'
-app_file: Dockerfile
-pinned: false
----
 
 <div align="center">
 
 # TriChat
 
-### Temporary anonymous rooms for quick file sharing between devices.
+### Temporary anonymous rooms for quick sharing between nearby devices.
 
 No account. No phone login. No personal messenger on shared PCs.
 
@@ -28,11 +18,11 @@ No account. No phone login. No personal messenger on shared PCs.
 
 <p>
   <a href="https://parthmax-trichat.hf.space"><b>Live Demo</b></a>
-  ·
+  &middot;
   <a href="#quick-start"><b>Quick Start</b></a>
-  ·
+  &middot;
   <a href="#the-little-office-problem"><b>Story</b></a>
-  ·
+  &middot;
   <a href="#how-it-works"><b>Architecture</b></a>
 </p>
 
@@ -44,25 +34,31 @@ No account. No phone login. No personal messenger on shared PCs.
 
 <table>
   <tr>
-    <td align="center" width="26%">
-      <b>PC-1</b><br />
-      <sub>open browser</sub>
+    <td align="center" width="20%">
+      <b>PC-1</b><br /><br />
+      <code>open</code><br />
+      <sub>no login</sub>
     </td>
-    <td align="center" width="48%">
-      <b>room: <code>project-drop</code></b><br /><br />
-      <code>files</code>
-      <code>links</code>
-      <code>notes</code>
-      <code>images</code>
+    <td align="center" width="60%">
+      <h3>room: <code>project-drop</code></h3>
+      <p>
+        <code>files</code>
+        <code>links</code>
+        <code>notes</code>
+        <code>images</code>
+      </p>
+      <sub>quick exchange, same room, any browser</sub>
     </td>
-    <td align="center" width="26%">
-      <b>PC-2</b><br />
-      <sub>join room</sub>
+    <td align="center" width="20%">
+      <b>PC-2</b><br /><br />
+      <code>join</code><br />
+      <sub>same room</sub>
     </td>
   </tr>
   <tr>
     <td align="center" colspan="3">
-      <b>Temporary by design</b><br />
+      <b>Temporary by design</b>
+      &nbsp;&middot;&nbsp;
       <code>auto-delete after 5 hours</code>
     </td>
   </tr>
@@ -70,10 +66,10 @@ No account. No phone login. No personal messenger on shared PCs.
 
 <table>
   <tr>
-    <td align="center"><b>No Login</b><br />Open a room instantly.</td>
-    <td align="center"><b>Share Fast</b><br />Drop files, links, and notes.</td>
-    <td align="center"><b>Temporary</b><br />History clears after 5 hours.</td>
-    <td align="center"><b>Any Device</b><br />Works in a browser.</td>
+    <td align="center" width="25%"><b>No Login</b><br /><sub>Open a room instantly.</sub></td>
+    <td align="center" width="25%"><b>Share Fast</b><br /><sub>Drop files, links, and notes.</sub></td>
+    <td align="center" width="25%"><b>Temporary</b><br /><sub>History clears after 5 hours.</sub></td>
+    <td align="center" width="25%"><b>Any Device</b><br /><sub>Works in a browser.</sub></td>
   </tr>
 </table>
 
@@ -81,9 +77,25 @@ No account. No phone login. No personal messenger on shared PCs.
 
 ## The Little Office Problem
 
-| | |
-| --- | --- |
-| <img src="docs/images/office-problem-scene.webp" alt="The little office problem" width="100%" /> | **Scene: three friends at work. Three computers. One tiny task.**<br><br>> "Can you send me that file?"<br><br>> "Sure. Wait... should I log into WhatsApp Web on your PC?"<br><br>> "Maybe email?"<br><br>> "No no, I don't want my personal account open here."<br><br>And suddenly, sharing one small file becomes a whole ritual: open a personal messenger, scan a QR code, wait for sync, remember to log out, and hope nothing private stays open. |
+<table>
+  <tr>
+    <td width="48%">
+      <img src="docs/images/office-problem-scene.webp" alt="The little office problem" width="100%" />
+    </td>
+    <td width="52%">
+      <h3>Three friends. Three computers. One tiny task.</h3>
+      <blockquote>
+        Can you send me that file?<br /><br />
+        Sure. Wait... should I log into WhatsApp Web on your PC?<br /><br />
+        Maybe email?<br /><br />
+        No no, I do not want my personal account open here.
+      </blockquote>
+      <p>
+        And suddenly, sharing one small file becomes a whole ritual: open a personal messenger, scan a QR code, wait for sync, remember to log out, and hope nothing private stays open.
+      </p>
+    </td>
+  </tr>
+</table>
 
 So TriChat started as a tiny escape hatch.
 
@@ -93,19 +105,52 @@ Not a social network. Not a permanent chat app. Just a quick temporary room wher
 
 ## The Idea
 
-| | |
-| --- | --- |
-| **What if sharing between office PCs felt like passing a sticky note?**<br><br>1. Create a room<br>2. Tell your friend the room name<br>3. Drop files, links, or text<br>4. Leave<br>5. History disappears after 5 hours | <img src="docs/images/glowing-room-idea.webp" alt="The TriChat idea moment" width="100%" /> |
+<table>
+  <tr>
+    <td width="52%">
+      <h3>What if sharing between office PCs felt like passing a sticky note?</h3>
+      <ol>
+        <li>Create a room.</li>
+        <li>Tell your friend the room name.</li>
+        <li>Drop files, links, images, or text.</li>
+        <li>Leave when the work is done.</li>
+        <li>History disappears after 5 hours.</li>
+      </ol>
+    </td>
+    <td width="48%">
+      <img src="docs/images/glowing-room-idea.webp" alt="The TriChat idea moment" width="100%" />
+    </td>
+  </tr>
+</table>
 
 That is TriChat.
 
-| Need | TriChat Answer |
-| --- | --- |
-| Move a file from one PC to another | Join the same room and upload it |
-| Avoid logging into WhatsApp or email | No account needed |
-| Share quick links or notes | Send them as messages |
-| Avoid long-term clutter | Auto-clears after 5 hours |
-| Use any device | Works in a browser |
+<table>
+  <tr>
+    <th align="left">Need</th>
+    <th align="left">TriChat answer</th>
+  </tr>
+  <tr>
+    <td>Move a file from one PC to another</td>
+    <td>Join the same room and upload it</td>
+  </tr>
+  <tr>
+    <td>Avoid WhatsApp, email, or personal logins</td>
+    <td>No account needed</td>
+  </tr>
+  <tr>
+    <td>Share quick links or notes</td>
+    <td>Send them as room messages</td>
+  </tr>
+  <tr>
+    <td>Avoid long-term clutter</td>
+    <td>Auto-clears after 5 hours</td>
+  </tr>
+  <tr>
+    <td>Use any device nearby</td>
+    <td>Works in a browser</td>
+  </tr>
+</table>
 
 ---
 
@@ -113,14 +158,14 @@ That is TriChat.
 
 <table>
   <tr>
-    <td><b>Anonymous rooms</b><br />Join with a name and room. No account ceremony.</td>
-    <td><b>Quick sharing</b><br />Send text, links, images, and files between devices.</td>
-    <td><b>Realtime chat</b><br />WebSocket-powered messages feel instant.</td>
+    <td width="33%"><b>Anonymous rooms</b><br /><sub>Join with a name and room. No account ceremony.</sub></td>
+    <td width="33%"><b>Quick sharing</b><br /><sub>Send text, links, images, and files between devices.</sub></td>
+    <td width="33%"><b>Realtime chat</b><br /><sub>WebSocket-powered messages feel instant.</sub></td>
   </tr>
   <tr>
-    <td><b>5-hour expiry</b><br />Messages and uploaded files are temporary by design.</td>
-    <td><b>Room cache</b><br />Small in-memory cache keeps recent room loading snappy.</td>
-    <td><b>Self-hostable</b><br />Run it locally, in Docker, or on Hugging Face Spaces.</td>
+    <td><b>5-hour expiry</b><br /><sub>Messages and uploaded files are temporary by design.</sub></td>
+    <td><b>Room cache</b><br /><sub>Small in-memory cache keeps recent room loading snappy.</sub></td>
+    <td><b>Self-hostable</b><br /><sub>Run locally, in Docker, or on Hugging Face Spaces.</sub></td>
   </tr>
 </table>
 
@@ -145,9 +190,20 @@ flowchart LR
 
 ## Temporary By Design
 
-| | |
-| --- | --- |
-| <img src="docs/images/auto-delete-scene.webp" alt="TriChat auto delete scene" width="100%" /> | Every saved message and uploaded file gets an expiry time.<br><br>`created_at + 5 hours = expires_at`<br><br>The cleanup worker runs in the background and removes expired database messages, uploaded files, and stale cached history.<br><br>TriChat is intentionally short-lived. It is for quick exchange, not forever storage. |
+<table>
+  <tr>
+    <td width="48%">
+      <img src="docs/images/auto-delete-scene.webp" alt="TriChat auto delete scene" width="100%" />
+    </td>
+    <td width="52%">
+      <h3>Built to disappear after the job is done.</h3>
+      <p>Every saved message and uploaded file gets an expiry time.</p>
+      <p><code>created_at + 5 hours = expires_at</code></p>
+      <p>The cleanup worker runs in the background and removes expired database messages, uploaded files, and stale cached history.</p>
+      <p><b>TriChat is intentionally short-lived.</b> It is for quick exchange, not forever storage.</p>
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -249,33 +305,62 @@ Never commit your real `.env` file.
 <summary><b>Architecture map</b></summary>
 <br />
 
-```text
-Browser
-  |
-  | WebSocket messages
-  v
-FastAPI app
-  |
-  | save messages / fetch room history
-  v
-Supabase Postgres
-  |
-  | upload files / delete expired files
-  v
-Supabase Storage
-```
+<table>
+  <tr>
+    <td align="center"><b>Browser</b><br /><sub>room UI</sub></td>
+    <td align="center"><b>FastAPI</b><br /><sub>routes + WebSockets</sub></td>
+    <td align="center"><b>Supabase Postgres</b><br /><sub>room history</sub></td>
+    <td align="center"><b>Supabase Storage</b><br /><sub>uploaded files</sub></td>
+  </tr>
+  <tr>
+    <td align="center" colspan="4">
+      <code>open room</code>
+      &nbsp;&rarr;&nbsp;
+      <code>send message/file</code>
+      &nbsp;&rarr;&nbsp;
+      <code>sync realtime</code>
+      &nbsp;&rarr;&nbsp;
+      <code>cleanup expired data</code>
+    </td>
+  </tr>
+</table>
 
 </details>
 
 Core stack:
 
-| Layer | Tool |
-| --- | --- |
-| Backend | FastAPI |
-| Realtime | WebSockets |
-| Database | Supabase Postgres |
-| File storage | Supabase Storage |
-| Deployment | Docker / Hugging Face Spaces |
+<table>
+  <tr>
+    <th align="left">Layer</th>
+    <th align="left">Tool</th>
+    <th align="left">Why it is here</th>
+  </tr>
+  <tr>
+    <td>Backend</td>
+    <td><code>FastAPI</code></td>
+    <td>Serves the app, APIs, uploads, and room logic.</td>
+  </tr>
+  <tr>
+    <td>Realtime</td>
+    <td><code>WebSockets</code></td>
+    <td>Keeps room messages live across devices.</td>
+  </tr>
+  <tr>
+    <td>Database</td>
+    <td><code>Supabase Postgres</code></td>
+    <td>Stores temporary messages with expiry timestamps.</td>
+  </tr>
+  <tr>
+    <td>File storage</td>
+    <td><code>Supabase Storage</code></td>
+    <td>Stores uploaded files until cleanup removes them.</td>
+  </tr>
+  <tr>
+    <td>Deployment</td>
+    <td><code>Docker</code> / <code>Hugging Face Spaces</code></td>
+    <td>Makes the project easy to run and share.</td>
+  </tr>
+</table>
 
 ---
 
@@ -300,12 +385,12 @@ Inserted, read, and deleted test row id: ...
 
 <table>
   <tr>
-    <td><b>Office teammates</b><br />Move files across shared PCs without personal logins.</td>
-    <td><b>Computer labs</b><br />Share notes and files between lab machines.</td>
+    <td width="50%"><b>Office teammates</b><br /><sub>Move files across shared PCs without personal logins.</sub></td>
+    <td width="50%"><b>Computer labs</b><br /><sub>Share notes and files between lab machines.</sub></td>
   </tr>
   <tr>
-    <td><b>Hackathon teams</b><br />Drop links, screenshots, builds, and quick notes.</td>
-    <td><b>Support desks</b><br />Create a temporary room for fast exchange.</td>
+    <td><b>Hackathon teams</b><br /><sub>Drop links, screenshots, builds, and quick notes.</sub></td>
+    <td><b>Support desks</b><br /><sub>Create a temporary room for fast exchange.</sub></td>
   </tr>
 </table>
 
@@ -313,9 +398,14 @@ Inserted, read, and deleted test row id: ...
 
 ## Safety Note
 
-TriChat is built for quick temporary exchange, not permanent private storage.
-
-Do not share passwords, private keys, confidential company documents, or anything that should not appear in a public temporary room.
+<table>
+  <tr>
+    <td>
+      <b>TriChat is built for quick temporary exchange, not permanent private storage.</b><br /><br />
+      Do not share passwords, private keys, confidential company documents, or anything that should not appear in a public temporary room.
+    </td>
+  </tr>
+</table>
 
 ---
 
@@ -354,8 +444,14 @@ TriChat is a temporary anonymous room: open a room, share files or links, and th
 
 <div align="center">
 
-### If TriChat saved you from logging into WhatsApp on a random PC, give it a star.
+### Open a room. Share the thing. Leave no mess.
 
 Temporary rooms. Quick sharing. No personal login.
+
+<p>
+  <a href="https://parthmax-trichat.hf.space"><b>Try TriChat live</b></a>
+  &middot;
+  <a href="#quick-start"><b>Run locally</b></a>
+</p>
 
 </div>
