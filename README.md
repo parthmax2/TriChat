@@ -39,7 +39,7 @@ No account. No phone login. No personal messenger on shared PCs.
 </div>
 
 <p align="center">
-  <img src="docs/images/trichat-hero-banner.png" alt="TriChat hero banner" width="100%" />
+  <img src="docs/images/trichat-hero-banner.webp" alt="TriChat hero banner" width="100%" />
 </p>
 
 ```text
@@ -65,7 +65,7 @@ No account. No phone login. No personal messenger on shared PCs.
 
 | | |
 | --- | --- |
-| <img src="docs/images/office-problem-scene.png" alt="The little office problem" width="100%" /> | **Scene: three friends at work. Three computers. One tiny task.**<br><br>> "Can you send me that file?"<br><br>> "Sure. Wait... should I log into WhatsApp Web on your PC?"<br><br>> "Maybe email?"<br><br>> "No no, I don't want my personal account open here."<br><br>And suddenly, sharing one small file becomes a whole ritual: open a personal messenger, scan a QR code, wait for sync, remember to log out, and hope nothing private stays open. |
+| <img src="docs/images/office-problem-scene.webp" alt="The little office problem" width="100%" /> | **Scene: three friends at work. Three computers. One tiny task.**<br><br>> "Can you send me that file?"<br><br>> "Sure. Wait... should I log into WhatsApp Web on your PC?"<br><br>> "Maybe email?"<br><br>> "No no, I don't want my personal account open here."<br><br>And suddenly, sharing one small file becomes a whole ritual: open a personal messenger, scan a QR code, wait for sync, remember to log out, and hope nothing private stays open. |
 
 So TriChat started as a tiny escape hatch.
 
@@ -77,7 +77,7 @@ Not a social network. Not a permanent chat app. Just a quick temporary room wher
 
 | | |
 | --- | --- |
-| **What if sharing between office PCs felt like passing a sticky note?**<br><br>1. Create a room<br>2. Tell your friend the room name<br>3. Drop files, links, or text<br>4. Leave<br>5. History disappears after 5 hours | <img src="docs/images/glowing-room-idea.png" alt="The TriChat idea moment" width="100%" /> |
+| **What if sharing between office PCs felt like passing a sticky note?**<br><br>1. Create a room<br>2. Tell your friend the room name<br>3. Drop files, links, or text<br>4. Leave<br>5. History disappears after 5 hours | <img src="docs/images/glowing-room-idea.webp" alt="The TriChat idea moment" width="100%" /> |
 
 That is TriChat.
 
@@ -111,7 +111,7 @@ That is TriChat.
 ## Sharing Flow
 
 <p align="center">
-  <img src="docs/images/temp-room-flow.png" alt="TriChat sharing flow" width="82%" />
+  <img src="docs/images/temp-room-flow.webp" alt="TriChat sharing flow" width="82%" />
 </p>
 
 ```mermaid
@@ -129,7 +129,7 @@ flowchart LR
 
 | | |
 | --- | --- |
-| <img src="docs/images/auto-delete-scene.png" alt="TriChat auto delete scene" width="100%" /> | Every saved message and uploaded file gets an expiry time.<br><br>`created_at + 5 hours = expires_at`<br><br>The cleanup worker runs in the background and removes expired database messages, uploaded files, and stale cached history.<br><br>TriChat is intentionally short-lived. It is for quick exchange, not forever storage. |
+| <img src="docs/images/auto-delete-scene.webp" alt="TriChat auto delete scene" width="100%" /> | Every saved message and uploaded file gets an expiry time.<br><br>`created_at + 5 hours = expires_at`<br><br>The cleanup worker runs in the background and removes expired database messages, uploaded files, and stale cached history.<br><br>TriChat is intentionally short-lived. It is for quick exchange, not forever storage. |
 
 ---
 
@@ -331,7 +331,7 @@ TriChat is a temporary anonymous room: open a room, share files or links, and th
 ---
 
 <p align="center">
-  <img src="docs/images/friends-success-scene.png" alt="TriChat friends success scene" width="100%" />
+  <img src="docs/images/friends-success-scene.webp" alt="TriChat friends success scene" width="100%" />
 </p>
 
 <div align="center">
