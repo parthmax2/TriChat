@@ -20,14 +20,14 @@ No account. No phone login. No personal messenger on shared PCs.
 **Open a room. Share what you need. Everything clears after 5 hours.**
 
 <p>
-  <a href="https://huggingface.co/spaces/parthmax/TriChat"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Hugging%20Face-ffcc4d?style=for-the-badge" /></a>
+  <a href="https://parthmax-trichat.hf.space"><img alt="Live Demo" src="https://img.shields.io/badge/Live%20Demo-Hugging%20Face-ffcc4d?style=for-the-badge" /></a>
   <img alt="FastAPI" src="https://img.shields.io/badge/FastAPI-009688?style=for-the-badge&logo=fastapi&logoColor=white" />
   <img alt="WebSockets" src="https://img.shields.io/badge/WebSockets-Realtime-3b82f6?style=for-the-badge" />
   <img alt="Temporary" src="https://img.shields.io/badge/Auto%20Delete-5%20Hours-f472b6?style=for-the-badge" />
 </p>
 
 <p>
-  <a href="https://huggingface.co/spaces/parthmax/TriChat"><b>Live Demo</b></a>
+  <a href="https://parthmax-trichat.hf.space"><b>Live Demo</b></a>
   ·
   <a href="#quick-start"><b>Quick Start</b></a>
   ·
@@ -42,13 +42,31 @@ No account. No phone login. No personal messenger on shared PCs.
   <img src="docs/images/trichat-hero-banner.webp" alt="TriChat hero banner" width="100%" />
 </p>
 
-```text
-        [ PC-1 ]  ---- room: project-drop ----  [ PC-2 ]
-            \                                      /
-             \---- files, links, notes, images ---/
-
-                 temporary by design: 5 hours
-```
+<table>
+  <tr>
+    <td align="center" width="26%">
+      <b>PC-1</b><br />
+      <sub>open browser</sub>
+    </td>
+    <td align="center" width="48%">
+      <b>room: <code>project-drop</code></b><br /><br />
+      <code>files</code>
+      <code>links</code>
+      <code>notes</code>
+      <code>images</code>
+    </td>
+    <td align="center" width="26%">
+      <b>PC-2</b><br />
+      <sub>join room</sub>
+    </td>
+  </tr>
+  <tr>
+    <td align="center" colspan="3">
+      <b>Temporary by design</b><br />
+      <code>auto-delete after 5 hours</code>
+    </td>
+  </tr>
+</table>
 
 <table>
   <tr>
